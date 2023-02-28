@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>常见问题 - eslint笔记</title>
+        <title>使用 - eslint笔记</title>
 
 
         <!-- Custom HTML head -->
@@ -80,7 +80,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="qa/common.html" class="active"><strong aria-hidden="true">1.</strong> 常见问题</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="usage/index.html" class="active"><strong aria-hidden="true">1.</strong> 使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="uasge/prettier.html"><strong aria-hidden="true">1.1.</strong> Prettier</a></li></ol></li><li class="chapter-item expanded "><a href="qa/common.html"><strong aria-hidden="true">2.</strong> 常见问题</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -141,26 +141,16 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="常见问题"><a class="header" href="#常见问题">常见问题</a></h1>
-<h2 id="配置typescript使用时的问题"><a class="header" href="#配置typescript使用时的问题">配置<code>TypeScript</code>使用时的问题</a></h2>
-<p>在配合<code>TypeScript</code>使用时，有时候会出现下面这样的问题:<em>You must therefore provide a value for the &quot;parserOptions.project&quot; property for @typescript-eslint/parser</em>。</p>
-<p>这个时候，我们只需要在<code>.eslint.js</code>修改为下面的代码即可以。</p>
-<pre><code class="language-javascript">module.exports = {
-    // ...
-    parseOptions: {
-    // ...
-    project:[/*tsconfig配置文件的路径*/]
-    // ...
-    }
-    //  ...
-}
-</code></pre>
+                        <h1 id="eslint的使用"><a class="header" href="#eslint的使用">Eslint的使用</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
+                            <a rel="next" href="uasge/prettier.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -169,6 +159,9 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
+                    <a rel="next" href="uasge/prettier.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

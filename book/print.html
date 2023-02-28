@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="qa/common.html"><strong aria-hidden="true">1.</strong> 常见问题</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="usage/index.html"><strong aria-hidden="true">1.</strong> 使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="uasge/prettier.html"><strong aria-hidden="true">1.1.</strong> Prettier</a></li></ol></li><li class="chapter-item expanded "><a href="qa/common.html"><strong aria-hidden="true">2.</strong> 常见问题</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,7 +142,36 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="常见问题"><a class="header" href="#常见问题">常见问题</a></h1>
+                        <h1 id="eslint的使用"><a class="header" href="#eslint的使用">Eslint的使用</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="配置prettier使用"><a class="header" href="#配置prettier使用">配置Prettier使用</a></h1>
+<p><code>Prettier</code>是一个通用的前端代码格式化的工具。使用<code>Prettier</code>可以有效的帮助我们实现前端代码风格的统一，再加上<code>EsLint</code>的检查可以进上步规范代码样式。</p>
+<h2 id="安装必要的依赖"><a class="header" href="#安装必要的依赖">安装必要的依赖</a></h2>
+<p>要想让<code>EsLint</code>结合<code>Prettier</code>，要安装两个npm包:</p>
+<ul>
+<li>eslint-config-prettier</li>
+<li>eslint-plugin-prettier</li>
+</ul>
+<pre><code class="language-shell">pnpm add -D eslint-config-prettier eslint-plugin-prettier
+</code></pre>
+<h2 id="修改配置文件"><a class="header" href="#修改配置文件">修改配置文件</a></h2>
+<p>要在<code>eslint</code>中使用<code>prettier</code>除了要安装npm依赖包之外，还要修改一下<code>.eslint.js</code>配置文件,主要要修改三个配置：</p>
+<ul>
+<li>extends字段</li>
+<li>plugins字段</li>
+<li>rules字段</li>
+</ul>
+<pre><code class="language-js">module.exports = {
+    extends: ['prettier'],
+    plugins: ['prettier'],
+    rules:{
+        'prettier/prettier': 'error'
+    }
+}
+</code></pre>
+<blockquote>
+<p>注意：<code>prettier</code>的插件和扩展要放在其他插件和扩展之后</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="常见问题"><a class="header" href="#常见问题">常见问题</a></h1>
 <h2 id="配置typescript使用时的问题"><a class="header" href="#配置typescript使用时的问题">配置<code>TypeScript</code>使用时的问题</a></h2>
 <p>在配合<code>TypeScript</code>使用时，有时候会出现下面这样的问题:<em>You must therefore provide a value for the &quot;parserOptions.project&quot; property for @typescript-eslint/parser</em>。</p>
 <p>这个时候，我们只需要在<code>.eslint.js</code>修改为下面的代码即可以。</p>
